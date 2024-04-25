@@ -1,0 +1,1 @@
+#Write a Python program to read and print various types of variables.

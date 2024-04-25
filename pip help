@@ -1,0 +1,83 @@
+$ pip help
+
+Usage:
+  pip <command> [options]
+
+Commands:
+  install                     Install packages.
+  download                    Download packages.
+  uninstall                   Uninstall packages.
+  freeze                      Output installed packages in requirements format.
+  list                        List installed packages.
+  show                        Show information about installed packages.
+  check                       Verify installed packages have compatible
+                              dependencies.
+  config                      Manage local and global configuration.
+  search                      Search PyPI for packages.
+  wheel                       Build wheels from your requirements.
+  hash                        Compute hashes of package archives.
+  completion                  A helper command used for command completion.
+  help                        Show help for commands.
+
+General Options:
+  -h, --help                  Show help.
+  --isolated                  Run pip in an isolated mode, ignoring environment
+                              variables and user configuration.
+  -v, --verbose               Give more output. Option is additive, and can be
+                              used up to 3 times.
+  -V, --version               Show version and exit.
+  -q, --quiet                 Give less output. Option is additive, and can be
+                              used up to 3 times (corresponding to WARNING,
+                              ERROR, and CRITICAL logging levels).
+  --log <path>                Path to a verbose appending log.
+  --proxy <proxy>             Specify a proxy in the form
+                              [user:passwd@]proxy.server:port.
+  --retries <retries>         Maximum number of retries each connection should
+                              attempt (default 5 times).
+  --timeout <sec>             Set the socket timeout (default 15 seconds).
+  --exists-action <action>    Default action when a path already exists:
+                              (s)witch, (i)gnore, (w)ipe, (b)ackup, (a)bort).
+  --trusted-host <hostname>   Mark this host as trusted, even though it does
+                              not have valid or any HTTPS.
+  --cert <path>               Path to alternate CA bundle.
+  --client-cert <path>        Path to SSL client certificate, a single file
+                              containing the private key and the certificate in
+                              PEM format.
+  --cache-dir <dir>           Store the cache data in <dir>.
+  --no-cache-dir              Disable the cache.
+  --disable-pip-version-check
+                              Don't periodically check PyPI to determine
+                              whether a new version of pip is available for
+                              download. Implied with --no-index.
+As you can see, pip provides an install command to install packages. You can run it to install the requests package:
+
+$ pip install requests
+
+Looking in indexes: https://pypi.org/simple
+Collecting requests
+  Using cached
+  https://files.pythonhosted.org/packages/7d/e3/
+  20f3d364d6c8e5d2353c72a67778eb189176f08e873c9900e10c0287b84b/
+  requests-2.21.0-py2.py3-none-any.whl
+Collecting chardet<3.1.0,>=3.0.2 (from requests)
+  Using cached https://files.pythonhosted.org/packages/bc/a9/
+  01ffebfb562e4274b6487b4bb1ddec7ca55ec7510b22e4c51f14098443b8/
+  chardet-3.0.4-py2.py3-none-any.whl
+Collecting idna<2.9,>=2.5 (from requests)
+  Using cached https://files.pythonhosted.org/packages/14/2c/
+  cd551d81dbe15200be1cf41cd03869a46fe7226e7450af7a6545bfc474c9/
+  idna-2.8-py2.py3-none-any.whl
+Collecting urllib3<1.25,>=1.21.1 (from requests)
+  Using cached https://files.pythonhosted.org/packages/62/00/
+  ee1d7de624db8ba7090d1226aebefab96a2c71cd5cfa7629d6ad3f61b79e/
+  urllib3-1.24.1-py2.py3-none-any.whl
+Collecting certifi>=2017.4.17 (from requests)
+  Using cached https://files.pythonhosted.org/packages/9f/e0/
+  accfc1b56b57e9750eba272e24c4dddeac86852c2bebd1236674d7887e8a/
+  certifi-2018.11.29-py2.py3-none-any.whl
+Installing collected packages: chardet, idna, urllib3, certifi, requests
+Successfully installed certifi-2018.11.29 chardet-3.0.4 idna-2.8
+  requests-2.21.0 urllib3-1.24.1
+You are using pip version 18.1, however version 19.0.1 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip'
+  command.
